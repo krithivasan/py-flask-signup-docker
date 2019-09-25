@@ -1,0 +1,18 @@
+{
+    "family": "flask-signup",
+    "containerDefinitions": [
+        {
+            "image": "478957249214.dkr.ecr.us-east-1.amazonaws.com/test-deploy:v_%BUILD_NUMBER%",
+            "name": "test-deploy",
+            "cpu": 10,
+            "memory": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 5000,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
